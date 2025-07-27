@@ -1,3 +1,4 @@
+import * as THREE from 'three';
 import { createTexture } from "@utils/createTexture";
 
 const options = [
@@ -9,5 +10,11 @@ const options = [
 ];
 
 const glass = createTexture("glass", options);
+
+const colorTexture = glass.colorTexture;
+colorTexture.colorSpace = THREE.SRGBColorSpace;
+colorTexture.generateMipmaps = false;
+colorTexture.minFilter = THREE.NearestFilter;
+colorTexture.magFilter = THREE.NearestFilter;
 
 export { glass };

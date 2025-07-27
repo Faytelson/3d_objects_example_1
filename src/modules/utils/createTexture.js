@@ -1,15 +1,10 @@
-import * as THREE from "three";
-import { loadingManager } from "@utils/loadingManagers";
+import { textureLoader } from "@loaders/textureLoader";
 
-const textureLoader = new THREE.TextureLoader(loadingManager);
-
-function createTexture(object, options) {
+function createTexture(materialName, options) {
   const texturesToCreate = {};
-  options.forEach((elem) => {
-    let texture = textureLoader.load(
-      `textures/${object}/${elem.name}.${elem.ext}`
-    );
-    let propName = `${elem.name}Texture`;
+  options.forEach((option) => {
+    let texture = textureLoader.load(`textures/${materialName}/${option.name}.${option.ext}`);
+    let propName = `${option.name}Texture`;
     texturesToCreate[propName] = texture;
   });
   return texturesToCreate;

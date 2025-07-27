@@ -61,7 +61,9 @@ module.exports = {
     alias: {
       "@": path.resolve(__dirname, "src"),
       "@animations": path.resolve(__dirname, "src/modules/animations"),
+      "@env_maps": path.resolve(__dirname, "src/modules/env_maps"),
       "@lights": path.resolve(__dirname, "src/modules/lights"),
+      "@loaders": path.resolve(__dirname, "src/modules/loaders"),
       "@materials": path.resolve(__dirname, "src/modules/materials"),
       "@meshes": path.resolve(__dirname, "src/modules/meshes"),
       "@settings": path.resolve(__dirname, "src/modules/settings"),

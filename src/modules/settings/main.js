@@ -2,8 +2,9 @@ import * as THREE from "three";
 import AnimationManager from "@animations/AnimationManager";
 import ControlsManager from "@settings/controls";
 import { ambientLight, pointLight, directionalLight } from "@lights/lights";
-import { marbleSphere } from "@meshes/marble_sphere";
-import { glassCube } from "@meshes/glassCube";
+import { marbleBox } from "@meshes/marble_box";
+import { glassSphere } from "@meshes/glassSphere";
+import { envMap } from "@env_maps/env_map";
 // import GUI from "lil-gui";
 // import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
 
@@ -15,11 +16,13 @@ const sizes = {
 
 // Scene
 const scene = new THREE.Scene();
+scene.background = envMap;
 
 // Camera
 const camera = new THREE.PerspectiveCamera(55, sizes.width / sizes.height, 1, 100);
-camera.position.y = 0;
-camera.position.z = 7;
+camera.position.x = 9;
+camera.position.y = 1;
+camera.position.z = 4;
 scene.add(camera);
 
 //  Renderer
@@ -30,10 +33,10 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 // Meshes
-marbleSphere.position.set(0, 0, 0);
-glassCube.position.set(3, 0, 0);
-scene.add(marbleSphere);
-scene.add(glassCube);
+marbleBox.position.set(0, 0, 0);
+glassSphere.position.set(3, 0, 0);
+scene.add(marbleBox);
+scene.add(glassSphere);
 // исправить искажение объектов при ресайзе, выяснить, с чем связано
 
 //  Lights
