@@ -1,4 +1,4 @@
-# 3D Examples 1
+# 3D Objects and Textures Examples
 
 ## Setup
 Run this followed commands:
@@ -13,3 +13,6 @@ npm run dev
 # Build for production in the dist/ directory
 npm run build
 ```
+
+### Node Version: 
+## >= 18.12.0
