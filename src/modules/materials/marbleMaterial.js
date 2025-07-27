@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { marble } from "../textures/marble";
+import { marble } from "@textures/marble";
 
 const marbleMaterial = new THREE.MeshPhysicalMaterial();
 marbleMaterial.map = marble.colorTexture;

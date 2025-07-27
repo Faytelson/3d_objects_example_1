@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { createTexture } from "../utils/createTexture";
+import { createTexture } from "@utils/createTexture";
 
 const options = [
   { name: "color", ext: "png" },

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/js/index.js",
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
@@ -58,5 +58,16 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".json"],
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+      "@animations": path.resolve(__dirname, "src/modules/animations"),
+      "@lights": path.resolve(__dirname, "src/modules/lights"),
+      "@materials": path.resolve(__dirname, "src/modules/materials"),
+      "@meshes": path.resolve(__dirname, "src/modules/meshes"),
+      "@settings": path.resolve(__dirname, "src/modules/settings"),
+      "@textures": path.resolve(__dirname, "src/modules/textures"),
+      "@utils": path.resolve(__dirname, "src/modules/utils"),
+      "@static": path.resolve(__dirname, "static"),
+    },
   },
 };

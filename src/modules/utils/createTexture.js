@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { loadingManager } from "./loadingManagers";
+import { loadingManager } from "@utils/loadingManagers";
 
 const textureLoader = new THREE.TextureLoader(loadingManager);
 

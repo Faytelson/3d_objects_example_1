@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { marbleMaterial } from "../materials/marbleMaterial";
+import { marbleMaterial } from "@materials/marbleMaterial";
 
 const marbleSphereGeometry = new THREE.SphereGeometry(1, 32, 32);
 
