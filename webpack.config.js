@@ -7,7 +7,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
-    publicPath: "/",
     clean: true,
   },
   module: {
@@ -30,7 +29,7 @@ module.exports = {
         test: /\.(png|jpg|gif|svg|hdr|tiff)$/,
         type: "asset/resource",
         generator: {
-          filename: "[path][name][ext]",
+          filename: "textures/[name].[contenthash][ext]",
         },
       },
     ],
@@ -43,10 +42,6 @@ module.exports = {
   ],
   devServer: {
     static: [
-      {
-        directory: path.resolve(__dirname, "dist"), // Для собранных файлов
-        publicPath: "/",
-      },
       {
         directory: path.resolve(__dirname, "public"), // Для текстур
         publicPath: "/",
