@@ -10,3 +10,7 @@
   max-width: 100%;
   display: block;
 }
+
+.glass-sphere-controls {
+  background-color: rgb(33, 1, 92);
+}

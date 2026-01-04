@@ -5,7 +5,6 @@ import { ambientLight, pointLight, directionalLight } from "@lights/lights";
 import { marbleBox } from "@meshes/marble_box";
 import { glassSphere } from "@meshes/glassSphere";
 import { envMap } from "@env_maps/env_map";
-// import GUI from "lil-gui";
 // import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
 
 const canvas = document.querySelector("canvas.webgl");

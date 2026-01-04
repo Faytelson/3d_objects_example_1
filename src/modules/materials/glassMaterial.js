@@ -15,12 +15,11 @@ const glassMaterial = new THREE.MeshPhysicalMaterial({
   clearcoat: 1,
   clearcoatRoughness: 0.05,
   sheen: 0,
-  // применяем текстуры:
   map: glass.colorTexture,
   normalMap: glass.normalTexture,
   roughnessMap: glass.roughnessTexture,
-  // displacementMap: glass.heightTexture,
-  // исправить косяк
+  displacementMap: glass.heightTexture,
+  displacementScale: 0.01,
   aoMap: glass.ambientOcclusionTexture,
 });
 

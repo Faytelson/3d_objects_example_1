@@ -48,7 +48,7 @@ module.exports = {
         publicPath: "/",
       },
       {
-        directory: path.resolve(__dirname, "static"), // Для текстур
+        directory: path.resolve(__dirname, "public"), // Для текстур
         publicPath: "/",
         watch: true,
       },
@@ -69,7 +69,7 @@ module.exports = {
       "@settings": path.resolve(__dirname, "src/modules/settings"),
       "@textures": path.resolve(__dirname, "src/modules/textures"),
       "@utils": path.resolve(__dirname, "src/modules/utils"),
-      "@static": path.resolve(__dirname, "static"),
+      "@public": path.resolve(__dirname, "public"),
     },
   },
 };
